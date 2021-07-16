@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E2GRUPO5.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ver Lista"
+                     x:Name="Lista"
+                     IconImageSource="example_icon.png"
+                     Order="Primary"
+                     Priority="0"
+                     Clicked="toolbarmenu_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout BackgroundColor="White">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Ubicaciones" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Frame Visual="Material" Padding="10" CornerRadius="10" HasShadow="True">
+            <StackLayout Margin="10,10,10,10">
+
+                <Image  HeightRequest="200" Visual="Material"  x:Name="image"></Image>
+
+            </StackLayout>
+
+        </Frame>
+        <Frame Padding="10" Visual="Material" CornerRadius="10" HasShadow="True">
+            <Grid HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                    <Button Visual="Material" TextColor="White" BackgroundColor="Black"  x:Name="enviarInfo" Padding="10,10,10,10"  Text="Tomar Foto"></Button>
+
+                    <Button  Grid.Row="0" Grid.Column="0" TextColor="White" Text="Guardar ApiRest" BackgroundColor="Black" x:Name="Guardar" IsEnabled="False" Clicked="guardar_Clicked" ></Button>
+
+
+                </StackLayout>
+            </Grid>
+
+        </Frame>
+
+        <Label Text="Latitud Actual:" HorizontalTextAlignment="left" Padding="2" TextColor="Black" FontSize="16"/>
+        <Entry TextColor="Black" x:Name="txtLatitud"  />
+
+        <Label Text="Longitud Actual:" HorizontalTextAlignment="left" TextColor="Black" FontSize="16"/>
+        <Entry PlaceholderColor="Gray" TextColor="Black" x:Name="txtLongitud"/>
+
+        
+        <Label Text="Descripcion la ubicacion: " HorizontalTextAlignment="left" TextColor="Black" FontSize="16"/>
+        <Entry  PlaceholderColor="Gray" TextColor="Black" x:Name="txtShortDescripcion" />
+
+
+        <Button x:Name="btnSalvar" Text="Guardar Locacion" Clicked="btnSalvar_Clicked" BackgroundColor="ForestGreen"/>
+    </StackLayout>
+
+</ContentPage>
